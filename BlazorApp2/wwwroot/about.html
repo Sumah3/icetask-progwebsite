@@ -21,19 +21,66 @@
              width: 340px;
              height: 210px;
         }
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: black;
+            z-index: 10000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+            .navbar ul {
+                font-family: 'Arial', sans-serif;
+                font-weight: 200;
+                padding: 0;
+                display: flex;
+                width: 100%;
+            }
+
+            .navbar li {
+                float: left;
+            }
+
+                .navbar li a {
+                    display: block;
+                    color: white;
+                    text-align: center;
+                    padding: 14px 16px;
+                    text-decoration: none;
+                }
+
+                    .navbar li a:hover:not(.active) {
+                        background-color: #111;
+                    }
+
+        .active {
+            background-color: #14162d;
+        }
     </style>
 </head>
 <body>
     <header>
-        <h1>About Me</h1>
-        <nav>
+        <nav class="navbar">
             <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                <li><a href="Index.html">HOME</a></li>
+                <li><a href="about.html">CHARACTERS</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
             </ul>
         </nav>
+
     </header>
+
+    <!-- connor -->
+    <section></section>
+
+    <!--kara-->
+    <section></section>
+
+    <!--markus-->
+    <section></section>
 
     <section>
         <h2>Who I Am</h2>
