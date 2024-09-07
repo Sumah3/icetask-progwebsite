@@ -5,27 +5,205 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My First Webpage</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #191A23;
+            margin: 0;
+        }
+
+        .text-block {
+            position: absolute;
+            border: 3px solid black;
+            background-color: black;
+            background-blend-mode: hue;
+            z-index: 3;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            display: inline-block;
+            opacity: 0.85;
+            text-align: center;
+            margin-left: 10px;
+            margin-right: 10px;
+            padding-left: 4%;
+            padding-RIGHT: 4%;
+        }
+
+        .font1 {
+            font-family: 'Trebuchet MS', sans-serif;
+            color: white;
+        }
+
+        .font2 {
+            font-family: 'Arial', sans-serif;
+            color: #e9e9e9;
+        }
+
+        header {
+            font-family: Arial;
+            color: gray;
+            height: 90vh;
+            width: 98%;
+            margin: 0px;
+            background-color: black;
+            text-align: center;
+            overflow: hidden;
+            z-index: -1;
+            position: relative;
+        }
+
+        #head {
+            font-size: 3.5em;
+            letter-spacing: 9px;
+        }
+
+        video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+            z-index: -1;
+        }
+
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: black;
+            z-index: 10000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+            .navbar ul {
+                font-family: 'Arial', sans-serif;
+                font-weight: 200;
+                padding: 0;
+                display: flex;
+                width: 100%;
+            }
+
+            .navbar li {
+                float: left;
+            }
+
+                .navbar li a {
+                    display: block;
+                    color: white;
+                    text-align: center;
+                    padding: 14px 16px;
+                    text-decoration: none;
+                }
+
+                    .navbar li a:hover:not(.active) {
+                        background-color: #111;
+                    }
+
+        .active {
+            background-color: #14162d;
+        }
+    </style>
 </head>
 <body>
+    <!-- navbar from : -->
+    <!-- https://www.w3schools.com/Css/css_navbar_horizontal.asp -->
+
+    <nav class="navbar">
+        <ul>
+            <li><a href="Index.html">HOME</a></li>
+            <li><a href="about.html">ABOUT</a></li>
+            <li><a href="contact.html">CONTACT</a></li>
+        </ul>
+    </nav>
+
+
+    <!--video header css and code form here :
+    https://stackoverflow.com/questions/54208390/html-css-video-as-background-for-the-header-->
+
     <header>
-        <h1>Welcome to My Webpage</h1>
-        <nav>
-            <ul>
-                <li><a href="Index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
+        <div class="text-block">
+            <p class="font1" id="head" style="font-weight: 700; line-height: 0.13; font-size:4em">DETROIT :</p>
+            <p class="font2" id="head" style="line-height: 0.1; font-weight: 10; "> BECOME HUMAN </p>
+        </div>
+
+        <div class="video">
+            <video autoplay muted loop>
+                <source src="Detroit_%20Become%20Human%20-%20PC%20Release%20Date%20Trailer%20_%20Quantic%20Dream%20(online-video-cutter.com).mp4" type="video/mp4" />
+            </video>
+        </div>
     </header>
 
-    <section>
-        <h2>About Me</h2>
-        <p>Hello! My name is John Doe, and this is my first webpage. I'm learning HTML and CSS.</p>
-        <img src="profile.webp" alt="Profile Picture">
-    </section>
+    <!-- basically the header position is absolute , so the website ignores its height and stuff, so everything will apear behind it since it ignores all that,
+        soo we need to set top padding to the top-->
+
+    <div style="margin:10px">
+        <div class="overview">
+            <p style="font-family: fantasy; color: white; font-weight: 500; font-size: 2.6em; font-stretch:extra-expanded; letter-spacing: 2px;
+             padding-left: 1%; border: 1px solid white; line-height: 13vh; border-left: 6px solid white;margin-right:3%;
+             background-color:#11131f;
+">
+                OVERVIEW :
+            </p>
+
+            <!-- image padding and alignment : https://stackoverflow.com/questions/1066188/css-positioning-images-next-to-text  -->
+            <img src="media/1576185776_1576185782.jpg" style="float: right; width: 70vh; margin-right:5%; margin-left:5vh" />
+
+
+            <p style="font-family: Arial, Helvetica, sans-serif; background-color: #11131f; color: white; font-weight: 800; font-size: 1.5em; font-stretch: expanded; line-height: 2vh; border: 1px solid white; margin-left: 4px; margin-right: 43%; padding: 1%; margin-bottom: 0; letter-spacing: 2px; ">
+                2018 | Action Adventure | Mature
+            </p>
+
+
+            <div style="border: 1px solid white; margin-left: 4px; margin-right: 43%; padding: 1%; margin-top: 0; background-color: #11131f; font-family: Arial, Helvetica, sans-serif; color: white; font-size: 1.2em ">
+
+                <p style="color:white;">
+                    Detroit: Become Human is an adventure game developed by Quantic Dream and released in 2018.
+                    The game is set in a futuristic version of Detroit, where androids have become an integral part of society, performing various tasks for humans.
+                </p>
+                <p style="color:white;">The story follows three main android characters:</p>
+
+
+                <p>Connor: A prototype android assigned to the Detroit Police Department to hunt down deviant androids.</p>
+                <p>Kara: A domestic android who becomes deviant to protect a young girl from her abusive father.</p>
+                <p>Markus: An in-home care android who becomes the leader of the android liberation movement.</p>
+                <p>
+                    The game is heavily narrative-driven, with player choices significantly impacting the story’s direction and outcome.
+                    It explores themes of artificial intelligence, consciousness, and what it means to be human
+                </p>
+            </div>
+        </div>
+    </div>
 
     <footer>
         <p>&copy; 2024 John Doe. All rights reserved.</p>
     </footer>
 </body>
+
+
 </html>
+
+<!--<header>
+    <h1>Welcome to My Webpage</h1>
+    <nav>
+        <ul>
+            <li><a href="Index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+</header>-->
+<!--<div class="video-container">
+    <iframe src="https://www.youtube.com/embed/hOVG7apudOo?si=dn8R3GYswt6X7teQ&amp" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+</div>
+<div class="content">
+    <h1>Welcome to My Website</h1>
+    <p>This is a sample video banner using YouTube.</p>
+</div>-->
+<!--<footer>
+    <p>&copy; 2024 John Doe. All rights reserved.</p>
+</footer>-->

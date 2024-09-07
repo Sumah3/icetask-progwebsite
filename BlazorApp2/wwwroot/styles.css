@@ -1,64 +1,27 @@
-﻿h2 { color: red;}
-
-/* Basic reset */
-body, h1, h2, p, ul, li, form, label, input, textarea {
+﻿ul {
+    list-style-type: none;
     margin: 0;
     padding: 0;
-}
-
-/* Set up the page structure */
-body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    padding: 20px;
-    background-color: #f4f4f4;
-}
-
-header {
+    overflow: hidden;
     background-color: #333;
-    color: white;
-    padding: 10px 0;
-    text-align: center;
 }
 
-    header h1 {
-        margin-bottom: 10px;
-    }
-
-nav ul {
-    list-style: none;
+li {
+    float: left;
 }
 
-    nav ul li {
-        display: inline;
-        margin-right: 10px;
+    li a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
     }
 
-        nav ul li a {
-            color: white;
-            text-decoration: none;
+        li a:hover:not(.active) {
+            background-color: #111;
         }
 
-section {
-    margin: 20px 0;
+.active {
+    background-color: #04AA6D;
 }
-
-    section h2 {
-        margin-bottom: 10px;
-    }
-
-    section p {
-        margin-bottom: 10px;
-    }
-
-    /* Adjusted profile picture size */
-    section img {
-        width: 150px; /* Adjust the width as needed */
-        height: auto;
-        border-radius: 50%; /* Optional: makes the image circular */
-        display: block;
-        margin: 0 auto; /* Centers the image */
-    }
-
-
-
