@@ -1,6 +1,8 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
+
 <head>
+   
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My First Webpage</title>
@@ -47,7 +49,7 @@
             font-family: Arial;
             color: gray;
             height: 90vh;
-            width: 98%;
+            width: 100%;
             margin: 0px;
             background-color: black;
             text-align: center;
@@ -74,6 +76,7 @@
             top: 0;
             width: 100%;
             background-color: black;
+            opacity: 90%;
             z-index: 10000;
             display: flex;
             justify-content: space-between;
@@ -107,6 +110,20 @@
         .active {
             background-color: #14162d;
         }
+
+        footer {
+            text-align: center;
+            padding: 3px;
+            background-color: DarkSalmon;
+            color: white;
+        }
+        .hover-animation {
+            transition: transform 0.3s ease-in-out;
+        }
+
+            .hover-animation:hover {
+                transform: scale(1.1);
+            }
     </style>
 </head>
 <body>
@@ -116,12 +133,12 @@
     <nav class="navbar">
         <ul>
             <li><a href="Index.html">HOME</a></li>
-            <li><a href="about.html">CHARACTERS</a></li>
+            <li><a href="about.html">MODDING</a></li>
             <li><a href="contact.html">CONTACT</a></li>
         </ul>
     </nav>
 
-
+    <!-- HOME  PAGE -->
     <!--video header css and code form here :
     https://stackoverflow.com/questions/54208390/html-css-video-as-background-for-the-header-->
 
@@ -149,12 +166,23 @@
 ">
                 OVERVIEW :
             </p>
+            <script src="_content/BlazorAnimate/blazorAnimateInterop.js"></script>
+            <script src="JavaScript.js"></script>
 
             <!-- image padding and alignment : https://stackoverflow.com/questions/1066188/css-positioning-images-next-to-text  -->
-            <img src="media/1576185776_1576185782.jpg" style="float: right; width: 70vh; margin-right:5%; margin-left:5vh" />
+            <!--<img src="media/1576185776_157618578q2.jpg" style="float: right; width: 70vh; margin-right:5%; margin-left:5vh" />
 
+    <!-- getting images to behave: 
+                https://www.w3docs.com/snippets/css/how-to-position-one-image-on-top-of-another-in-html-css.html#:~:text=Use%20a%20%3Cdiv%3E%20with%20a%20class%20name%20%22parent%22.,background%20image%20and%20the%20second%20will%20overlay%20it.
+                -->
+            <div class="parent" style="float: right; width: 70vh; margin-right: 5%; margin-left: 5vh; ">
+                <img src="media/1576185776_157618578q22.png" class="hover-animation" style="z-index: 1; position: absolute; width: 70vh " />
+                <script src="scrollAnimations.js"></script>
+                <img src="media/1576185776_157618578q2.jpg" style="z-index: -1; position: relative; width: 70vh " />
+            </div>
 
-            <p style="font-family: Arial, Helvetica, sans-serif; background-color: #11131f; color: white; font-weight: 800; font-size: 1.5em; font-stretch: expanded; line-height: 2vh; border: 1px solid white; margin-left: 4px; margin-right: 43%; padding: 1%; margin-bottom: 0; letter-spacing: 2px; ">
+            <p style="font-family: Arial, Helvetica, sans-serif; background-color: #11131f; color: white; font-weight: 700;
+font-size: 1.5em; line-height: 2vh; border: 1px solid white; margin-left: 4px; margin-right: 43%; padding: 1%; margin-bottom: 0; letter-spacing: 2px; ">
                 2018 | Action Adventure | Mature
             </p>
 
@@ -177,6 +205,20 @@
                 </p>
             </div>
         </div>
+        </div>
+
+    <div style="background-color: cornflowerblue; margin-top: 2%; padding: 1%">
+
+        <div>
+            <p style="font-family: fantasy; color: white; font-weight: 500; font-size: 2.6em; font-stretch: extra-expanded; letter-spacing: 2px;
+    margin-top: 0; font-size: 1.5em; line-height: 2vh; border: 2px solid white; margin-left: 4px; margin-right: 43%; padding: 1%; margin-bottom: 0; letter-spacing: 2px; ">
+
+                <img src="media/stars.png" style="position: inherit; width: 50vh;" />
+
+                <br />
+            </p>
+        </div>
+
     </div>
 
     <footer>

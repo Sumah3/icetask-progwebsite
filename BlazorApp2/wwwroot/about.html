@@ -6,6 +6,15 @@
     <title>About Me</title>
     <link rel="stylesheet" href="styles.css">
     <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #191A23;
+            margin: 0;
+        }
+
         table, th, td {
             border: 1px solid black;
             border-collapse: collapse;
@@ -21,15 +30,18 @@
              width: 340px;
              height: 210px;
         }
+
         .navbar {
             position: fixed;
             top: 0;
             width: 100%;
             background-color: black;
+            opacity: 95%;
             z-index: 10000;
             display: flex;
             justify-content: space-between;
             align-items: center;
+            
         }
 
             .navbar ul {
@@ -66,21 +78,35 @@
         <nav class="navbar">
             <ul>
                 <li><a href="Index.html">HOME</a></li>
-                <li><a href="about.html">CHARACTERS</a></li>
+                <li><a href="about.html">MODDING</a></li>
                 <li><a href="contact.html">CONTACT</a></li>
             </ul>
         </nav>
 
+        <!-- MODDING PAGE -->
+
     </header>
+    <div style="margin-top:13vh">
+    <!-- intro -->
+    <p>Ever wanted to make some very cursed moments in games? or just make something cool? This is how you can do it in detroit atleast..</p>
+    <p>
+        Due to the complete lack of mod support given by the developers, that in combination with a proprietary game engine makes the code itself extremely hard to modify.
+        Infact there really isnt any "code" or objects to modify at all, we are working with raw hexcode.
+    </p>
 
-    <!-- connor -->
-    <section></section>
+    <!-- tools -->
+    <p> as mentioned prior , youll be editing hex code so youll probably want a hexcode editor. Something like HxD is perfect </p>
+    <p> youll also want a community made tool called dbh.tool , obviuosly i wont be linking it because it sets off every ms defender alert possible and i will NOT be responsible for weird stuff happening</p>
 
-    <!--kara-->
-    <section></section>
+    <!-- understanding quantic dreams file format | hexcode -->
+        <p> great! we have the hexcode editor, lets get busy shall we?</p>
+        <p>but,,, to do anything, we need to understand the stuff we are going to be messing with.</p>
+    <!-- eg mods explained - methods -->
+    <!-- backpack  -->
+    <!-- endian byte swap -->
 
-    <!--markus-->
-    <section></section>
+    </div>
+    <div style="margin-top:7vh"></div>
 
     <section>
         <h2>Who I Am</h2>
